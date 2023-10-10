@@ -34,3 +34,24 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Issues encountered:
+
+Err when accessing the api/hello route:
+    Stack trace
+
+    Runtime.ImportModuleError: Error: Cannot find module 'styled-jsx/style'
+    Require stack:
+    - /var/task/node_modules/next/dist/server/require-hook.js
+    - /var/task/node_modules/next/dist/server/next-server.js
+    - /var/task/.netlify/functions-internal/___netlify-handler/___netlify-handler.js
+    - /var/task/___netlify-handler.js
+    - /var/runtime/index.mjs
+    at _loadUserApp (file:///var/runtime/index.mjs:1061:17)
+    at async Object.UserFunction.js.module.exports.load (file:///var/runtime/index.mjs:1093:21)
+    at async start (file:///var/runtime/index.mjs:1256:23)
+    at async file:///var/runtime/index.mjs:1262:1
+
+Solution:
+    Downgrading the next dependency in package.json from "next": "13.5.1", to "next": "13.4.9",
