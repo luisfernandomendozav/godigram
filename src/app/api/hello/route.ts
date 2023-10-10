@@ -1,4 +1,5 @@
-import { NextResponse } from '../../../../node_modules/next/server'
+import React from 'react'
+import { NextResponse } from 'next/server'
 
 export function GET() {
     return NextResponse.json({
