@@ -18,6 +18,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.36.1",
     "@types/bcryptjs": "^2.4.4",
     "@types/node": "^20",
     "@types/react": "^18",
