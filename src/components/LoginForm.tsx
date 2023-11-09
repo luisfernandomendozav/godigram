@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import AppContext from './AppContext'
 
-function Form() {
+function LoginForm() {
     const { name, setName } = useContext(AppContext)
     const handleClick = () => {
         setName('New Name')
@@ -32,4 +32,4 @@ function Form() {
     )
 }
 
-export default Form
+export default LoginForm
