@@ -14,7 +14,7 @@ function LoginForm() {
             const res = await axios.post('/api/auth/signup', {username, email, password})
             setUser(res.data.message.username)
             console.log(res)
-        } catch (error) {
+        } catch (error: any) {
             setError(error.response.data.message)
             console.log(error)
         }
