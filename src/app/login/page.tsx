@@ -2,6 +2,7 @@
 import LoginForm from '../../components/LoginForm'
 
 function LoginPage() {
+  const [name, setName] = useState('Default')
   return (
     <div className=''>
         <LoginForm />
